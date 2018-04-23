@@ -1,6 +1,6 @@
 {
     "name": "react-reviz3d",
-    "version": "0.1.21",
+    "version": "0.1.31",
     "description": "bundle of all reViz3D modules",
     "main": "lib/index.js",
     "author": "lucascassiano",
@@ -49,7 +49,7 @@
     },
     "scripts": {
         "start": "npm run storybook",
-        "build": "rimraf lib && babel src --out-dir lib --ignore test.js --copy-files",
+        "build": "rimraf lib && babel src --out-dir lib --copy-files",
         "test": "jest",
         "test:watch": "jest --watch",
         "storybook": "start-storybook -p 6006",
@@ -69,6 +69,8 @@
     },
     "dependencies": {
         "three": "^0.88.0",
-        "three-react-obj-loader": "^1.0.4"
+        "three-react-obj-loader": "^1.0.4",
+        "three-orbit-controls": "^82.1.0",
+        "three-react-mtl-loader": "^1.0.3"
     }
 }
