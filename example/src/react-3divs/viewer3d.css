@@ -1,7 +1,12 @@
 .canvas-2d {}
 
+.env3d{
+    position: relative;
+}
+
 .canvas-3d {
     pointer-events: none;
+   
 }
 
 .grid3d {
@@ -17,6 +22,7 @@
     position: absolute;
     top: 0px;
     z-index: 1;
+    border: solid 0.5pt;    
 }
 
 .cssRenderer {
@@ -29,13 +35,6 @@
     border: solid 1px white;
     overflow: hidden;
     color: #FFF;
-}
-
-.panel-3d:hover {
-    font-weight: 200;
-    font-size: 30pt;
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 2px 2px 10px rgba(255, 255, 255, 1);
 }
 
 .container_node {
