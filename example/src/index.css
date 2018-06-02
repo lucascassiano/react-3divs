@@ -9,3 +9,19 @@ body {
   display: grid;
   grid-template-columns: 600px 50%;
 }
+
+.reload{
+  color:#fff;
+  background: #333;
+  border-radius: 1px;
+  padding: 5px;
+  margin: 5px;
+  transition: 0.5s;
+}
+
+.reload:hover{
+  color:#000;
+  background: #fff;
+  border-radius: 2px;
+  cursor: default;
+}

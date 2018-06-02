@@ -43,10 +43,11 @@ class App extends Component {
                     <Viewer3d stats width={600} height={600}>
                         <Obj3d src={model} mtl={mtl} />
                         <Div3d position={{ x: 100, y: 100, z: 0 }}>
-                            <h3>Heart {counter}</h3>
+                            <h3>Heart</h3>
                         </Div3d>
                         <Div3d position={{ x: -100, y: 10, z: 0 }}>
-                            <h3>View{counter}</h3>
+                            <h3>View</h3>
+                            <div className="reload">reload</div>
                         </Div3d>
                     </Viewer3d>
 
