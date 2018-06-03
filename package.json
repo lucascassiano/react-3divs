@@ -1,7 +1,7 @@
 {
     "name": "react-reviz3d",
     "version": "0.1.31",
-    "description": "bundle of all reViz3D modules",
+    "description": "bundle of all react-reviz3d modules",
     "main": "lib/index.js",
     "author": "lucascassiano",
     "homepage": "https://github.com/lucascassiano/react-container-3d",
