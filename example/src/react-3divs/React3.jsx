@@ -1,7 +1,6 @@
 import React from 'react';
 import React3 from 'react-three-renderer';
 import * as THREE from 'three';
-import HTML3D from 'react-three-renderer-html3d/lib/HTML3D';
 
 class Simple extends React.Component {
 
@@ -71,14 +70,6 @@ class Simple extends React.Component {
             <meshBasicMaterial
               color={0x00ff00}
             />
-
-            <HTML3D
-              position={new THREE.Vector3()}
-              rotation={new THREE.Euler()}
-            >
-              <div>my custom HTML</div>
-            </HTML3D>
-
 
           </mesh>
         </scene>
