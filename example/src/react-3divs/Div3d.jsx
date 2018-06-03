@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import * as THREE from 'three';
-import { CSS3DRenderer, CSS3DObject } from "./CSS3DRenderer";
+import { CSS3DRenderer, CSS3DObject } from "./lib/CSS3DRenderer";
 
 import { } from "./viewer3d.css";
 
