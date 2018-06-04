@@ -15,14 +15,13 @@ export const obj3d_resolver = (element, origin = new THREE.Vector3(0, 0, 0), mat
         var source_mtl = element.props.mtl;
 
         if (source_mtl) {
-            console.log('loading mtl');
             var mtlLoader = new MTLLoader();
             mtlLoader.load(source_mtl, function (materials) {
                 materials.preload();
-                console.log(materials);
+
                 var objLoader = new OBJLoader();
                 objLoader.setMaterials(materials);
-
+                
                 objLoader.load(source_obj, function (object) {
                     resolve(object);
                 });
@@ -37,7 +36,7 @@ export const obj3d_resolver = (element, origin = new THREE.Vector3(0, 0, 0), mat
                         color: 0xf0f0f0,
                         transparent: true,
                         opacity: 1,
-                        wireframe:true
+                        wireframe: true
                     });
                 }
 

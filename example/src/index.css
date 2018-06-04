@@ -10,6 +10,12 @@ body {
   grid-template-columns: 600px 50%;
 }
 
+.grid > div{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 300px 300px;
+}
+
 .reload{
   color:#fff;
   background: #333;

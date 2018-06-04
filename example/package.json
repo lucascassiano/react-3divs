@@ -1,6 +1,6 @@
 {
   "name": "example",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
@@ -11,13 +11,14 @@
     "stats-js": "^1.0.0-alpha1",
     "three": "^0.93.0",
     "three-orbit-controls": "^82.1.0",
-    "three-react-mtl-loader": "^1.0.3",
+    "three-react-mtl-loader": "^1.1.1",
     "three-react-obj-loader": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "mv build ../demo/"
   }
 }
