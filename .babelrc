@@ -2,10 +2,16 @@
     "presets": [
         "env",
         "react",
-        "latest",
         "stage-0"
     ],
     "plugins": [
-        "transform-es2015-arrow-functions"
+        "transform-es2015-arrow-functions",
+        [
+            "transform-runtime",
+            {
+                "polyfill": false,
+                "regenerator": true
+            }
+        ]
     ]
 }

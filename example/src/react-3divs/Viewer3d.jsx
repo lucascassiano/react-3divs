@@ -129,7 +129,8 @@ class Viewer3d extends Component {
 		this.renderer.shadowMap.enabled = true;
 		this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-		this.renderer.domElement.className = "renderer";
+		var rendererStyle = this.props.rendererClassName ? "renderer" : this.props.rendererClassName;
+		this.renderer.domElement.className = rendererStyle;
 
 		this.renderer.setSize(width, height);
 
@@ -140,6 +141,7 @@ class Viewer3d extends Component {
 		this.cssRenderer = new CSS3DRenderer();
 
 		this.cssRenderer.setSize(width, height);
+		var cssRendererStyle = this.props.cssRendererClassName ? "cssRenderer" : "cssRenderer " + this.props.cssRendererClassName;
 		this.cssRenderer.domElement.className = "cssRenderer";
 
 		if (!this.props.static) {
@@ -298,6 +300,12 @@ class Viewer3d extends Component {
 
 	animate = async () => {
 
+		if (this.props) {
+			if (this.props.width != this.renderer.width || this.props.height != this.renderer.height) {
+				this.updateDimensions();
+			}
+		}
+
 		await this.layers.forEach((layer) => {
 			if (layer.update)
 				layer.update(this.scene, this.camera, this.renderer, this.utils);
@@ -306,6 +314,8 @@ class Viewer3d extends Component {
 		this.animation = requestAnimationFrame(this.animate);
 		this.renderer.render(this.scene, this.camera);
 		this.cssRenderer.render(this.cssScene, this.camera);
+
+
 
 	}
 
@@ -328,6 +338,8 @@ class Viewer3d extends Component {
 	}
 
 	render() {
+		//var className = this.props.className ? "env3d" : className;
+
 		return <div className="env3d">
 			<div ref="canvas3d" className="grid3d" />
 		</div>;
